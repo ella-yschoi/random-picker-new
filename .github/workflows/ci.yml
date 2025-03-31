@@ -4,9 +4,9 @@ name: Random Picker (new) Frontend CI
 # Workflows를 트리거할 이벤트 정의
 on:
   pull_request:
-    branches: [develop] # develop 브랜치로 PR이 열릴 때 실행됨
+    branches: [main] # main 브랜치로 PR이 열릴 때 실행됨
   push:
-    branches: [develop] # develop 브랜치에 직접 push될 때도 실행됨
+    branches: [main] # main 브랜치에 직접 push될 때도 실행됨
 
 jobs:
   frontend-ci:
