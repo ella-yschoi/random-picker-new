@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 import { ToggleProps } from './Toggle.type';
 
 const ToggleWrapper = styled.div`

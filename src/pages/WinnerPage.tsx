@@ -1,18 +1,20 @@
 import { useEffect } from 'react';
-import { WinnerPageProps } from '../types/pages.type';
+
+import { PrimaryButton } from '../components/button/Button';
+import {
+  ButtonsContainer,
+  Container,
+  ImageContainer,
+  WinnerContainer,
+} from '../components/container/Container.style';
+import Title from '../components/title/Title';
+import Toggle from '../components/toggle/Toggle';
 
 import { useTheme } from '../contexts/ThemeProvider';
-import Toggle from '../components/toggle/Toggle';
-import Title from '../components/title/Title';
-import { PrimaryButton } from '../components/button/Button';
+
 import WinningImage from '../assets/celebrate.gif';
 
-import {
-  Container,
-  WinnerContainer,
-  ImageContainer,
-  ButtonsContainer,
-} from '../components/container/Container.style';
+import { WinnerPageProps } from '../types/pages.type';
 
 const WinnerPage: React.FC<WinnerPageProps> = ({ participants }) => {
   const { isDarkMode, setIsDarkMode } = useTheme();

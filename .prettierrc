@@ -9,5 +9,25 @@
   "bracketSpacing": true,
   "arrowParens": "always",
   "endOfLine": "auto",
-  "bracketSameLine": false
+  "bracketSameLine": false,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "^../pages/(.*)$",
+    "^../routes/(.*)$",
+    "^../components/(.*)$",
+    "^../utils/(.*)$",
+    "^../apis/(.*)$",
+    "^../hooks/(.*)$",
+    "^../contexts/(.*)$",
+    "^../stores/(.*)$",
+    "^../libs/(.*)$",
+    "^../styles/(.*)$",
+    "^../constants/(.*)$",
+    "^../common/(.*)$",
+    "^../assets/(.*)$",
+    "^../types/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }

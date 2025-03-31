@@ -1,5 +1,6 @@
-import { TitleStyle } from './Title.style';
 import { useNavigate } from 'react-router';
+
+import { TitleStyle } from './Title.style';
 
 const Title = () => {
   const navigate = useNavigate();

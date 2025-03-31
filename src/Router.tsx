@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import MainPage from './pages/MainPage';
-import SettingPage from './pages/SettingPage';
 import ConfirmPage from './pages/ConfirmPage';
 import LoadingPage from './pages/LoadingPage';
+import MainPage from './pages/MainPage';
+import SettingPage from './pages/SettingPage';
 import WinnerPage from './pages/WinnerPage';
 
 export enum RoutePath {

@@ -1,16 +1,17 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 
-import { useTheme } from '../contexts/ThemeProvider';
-import Toggle from '../components/toggle/Toggle';
-import Title from '../components/title/Title';
-import LoadingImage from '../assets/drumming.gif';
-
 import {
   Container,
   DirectionContainer,
   ImageContainer,
 } from '../components/container/Container.style';
+import Title from '../components/title/Title';
+import Toggle from '../components/toggle/Toggle';
+
+import { useTheme } from '../contexts/ThemeProvider';
+
+import LoadingImage from '../assets/drumming.gif';
 
 const LoadingPage = () => {
   const navigate = useNavigate();

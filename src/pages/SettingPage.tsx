@@ -1,24 +1,24 @@
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 
-import { SettingPageProps } from '../types/pages.type';
-
-import { useTheme } from '../contexts/ThemeProvider';
-import Toggle from '../components/toggle/Toggle';
-import Title from '../components/title/Title';
-import { NavigationButton, InteractionButton } from '../components/button/Button';
-
-import { handleInputChange } from '../hooks/handlers';
-
+import { InteractionButton, NavigationButton } from '../components/button/Button';
 import {
+  ButtonsContainer,
   Container,
   DirectionContainer,
   InputContainer,
   SettingListContainer,
-  ButtonsContainer,
 } from '../components/container/Container.style';
 import { TextInput } from '../components/input/Input.style';
-import { SettingListUnit, PencilIcon } from '../components/unit/Units.style';
+import Title from '../components/title/Title';
+import Toggle from '../components/toggle/Toggle';
+import { PencilIcon, SettingListUnit } from '../components/unit/Units.style';
+
+import { handleInputChange } from '../hooks/handlers';
+
+import { useTheme } from '../contexts/ThemeProvider';
+
+import { SettingPageProps } from '../types/pages.type';
 
 const SettingPage: React.FC<SettingPageProps> = ({ setParticipants, participants }) => {
   const [nameInput, setNameInput] = useState('');

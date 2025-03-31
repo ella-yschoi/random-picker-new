@@ -1,18 +1,19 @@
 import { useEffect } from 'react';
-import { ConfirmPageProps } from '../types/pages.type';
 
-import { useTheme } from '../contexts/ThemeProvider';
-import Toggle from '../components/toggle/Toggle';
-import Title from '../components/title/Title';
 import { PrimaryButton } from '../components/button/Button';
-
 import {
+  ButtonsContainer,
+  ComfirmListContainer,
   Container,
   DirectionContainer,
-  ComfirmListContainer,
-  ButtonsContainer,
 } from '../components/container/Container.style';
+import Title from '../components/title/Title';
+import Toggle from '../components/toggle/Toggle';
 import { ConfirmListUnit } from '../components/unit/Units.style';
+
+import { useTheme } from '../contexts/ThemeProvider';
+
+import { ConfirmPageProps } from '../types/pages.type';
 
 const ConfirmPage: React.FC<ConfirmPageProps> = ({ participants }) => {
   const { isDarkMode, setIsDarkMode } = useTheme();
