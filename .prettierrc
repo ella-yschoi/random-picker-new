@@ -9,6 +9,5 @@
   "bracketSpacing": true,
   "arrowParens": "always",
   "endOfLine": "auto",
-  "bracketSameLine": false,
-  "tailwindConfig": "./tailwind.config.cjs"
+  "bracketSameLine": false
 }
