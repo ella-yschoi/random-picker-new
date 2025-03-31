@@ -21,7 +21,7 @@ const Toggle: React.FC<ToggleProps> = ({ isDarkMode, setIsDarkMode }) => {
           checked={isDarkMode}
           onChange={(e) => handleToggle(e.target.checked, setIsDarkMode)}
         />
-        <Slider isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
+        <Slider isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       </ToggleSwitch>
     </ToggleWrapper>
   );

@@ -4,7 +4,7 @@ const TextInput = styled.input`
   width: 13.5rem;
   height: 3rem;
   padding-left: 10px;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   border-radius: 10px;
   background-color: transparent;
   box-shadow: none;

@@ -4,7 +4,7 @@ import RouteProvider from './Router';
 function App() {
   return (
     <ThemeProvider>
-      <RouteProvider/>
+      <RouteProvider />
     </ThemeProvider>
   );
 }

@@ -18,9 +18,7 @@ const ConfirmPage: React.FC<ConfirmPageProps> = ({ participants }) => {
   const { isDarkMode, setIsDarkMode } = useTheme();
 
   useEffect(() => {
-    const currentTheme = document.body.classList.contains('dark-mode')
-      ? true
-      : false;
+    const currentTheme = document.body.classList.contains('dark-mode') ? true : false;
     setIsDarkMode(currentTheme);
   }, [setIsDarkMode]);
 

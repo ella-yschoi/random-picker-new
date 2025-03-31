@@ -35,7 +35,7 @@ const SettingListContainer = styled.div`
   height: 20rem;
   margin: 2rem 0rem;
   padding: 1.5rem;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   border-radius: 10px;
   background-color: #ffffff;
   background-color: var(--background-color);
@@ -67,4 +67,13 @@ const ButtonsContainer = styled.div<ButtonsContainerProps>`
   gap: ${(props) => props.gap};
 `;
 
-export { Container, DirectionContainer, InputContainer, SettingListContainer, ComfirmListContainer, ImageContainer, WinnerContainer, ButtonsContainer };
+export {
+  Container,
+  DirectionContainer,
+  InputContainer,
+  SettingListContainer,
+  ComfirmListContainer,
+  ImageContainer,
+  WinnerContainer,
+  ButtonsContainer,
+};

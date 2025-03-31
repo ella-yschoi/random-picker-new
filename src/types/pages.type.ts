@@ -16,4 +16,4 @@ interface WinnerPageProps {
   setParticipants: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-export type { MainPageProps, SettingPageProps, ConfirmPageProps, WinnerPageProps }
+export type { MainPageProps, SettingPageProps, ConfirmPageProps, WinnerPageProps };
