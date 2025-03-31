@@ -21,9 +21,7 @@ const MainPage: React.FC<MainPageProps> = ({ participants }) => {
   const { isDarkMode, setIsDarkMode } = useTheme();
 
   useEffect(() => {
-    const currentTheme = document.body.classList.contains('dark-mode')
-      ? true
-      : false;
+    const currentTheme = document.body.classList.contains('dark-mode') ? true : false;
     setIsDarkMode(currentTheme);
   }, [setIsDarkMode]);
 
@@ -42,17 +40,9 @@ const MainPage: React.FC<MainPageProps> = ({ participants }) => {
       <Title />
       <ImageContainer>
         {isDarkMode ? (
-          <img
-            src={TitleImageinDarkMode}
-            width='300rem'
-            alt='Title Image in Dark Mode'
-          />
+          <img src={TitleImageinDarkMode} width='300rem' alt='Title Image in Dark Mode' />
         ) : (
-          <img
-            src={TitleImageinLightMode}
-            width='300rem'
-            alt='Title Image in Light Mode'
-          />
+          <img src={TitleImageinLightMode} width='300rem' alt='Title Image in Light Mode' />
         )}
       </ImageContainer>
       <ButtonsContainer gap='1rem'>
