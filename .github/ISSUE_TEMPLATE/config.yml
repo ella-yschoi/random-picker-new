@@ -1,0 +1,22 @@
+blank_issues_enabled: true
+issue_templates:
+  - name: '🛠️ [CHORE] TODO'
+    about: 'Frontend Issue - chore'
+    title: '[CHORE] '
+    labels: ['chore']
+    assignees: []
+  - name: '🖥️ [FEATURE] TODO'
+    about: 'Frontend Issue - feature'
+    title: '[FEATURE] '
+    labels: ['feature']
+    assignees: []
+  - name: '🚨 [FIX] TODO'
+    about: 'Frontend Issue - fix'
+    title: '[FIX] '
+    labels: ['fix']
+    assignees: []
+  - name: '🧹 [REFACTORING] TODO'
+    about: 'Frontend Issue - refactoring'
+    title: '[REFACTORING] '
+    labels: ['refactoring']
+    assignees: []
