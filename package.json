@@ -43,7 +43,7 @@
   "lint-staged": {
     "**/*.{ts,tsx,js,jsx}": [
       "npm run lint",
-      "npm run test",
+      "npm run test -- --passWithNoTests",
       "npx prettier --write",
       "npx tsc --noEmit",
       "git add"
