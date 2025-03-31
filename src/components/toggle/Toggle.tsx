@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 
+import { handleToggle } from '../../hooks/handlers';
+
 import { ToggleProps } from './Toggle.type';
 import { ToggleWrapper, ToggleSwitch, Slider, Input } from './Toggle.style';
 
@@ -11,18 +13,14 @@ const Toggle: React.FC<ToggleProps> = ({ isDarkMode, setIsDarkMode }) => {
     document.body.classList.toggle('dark-mode', savedMode);
   }, [setIsDarkMode]);
 
-  const handleToggle = () => {
-    const newIsDarkMode = !isDarkMode;
-    setIsDarkMode(newIsDarkMode);
-    document.body.classList.toggle('dark-mode', newIsDarkMode);
-    // 새 설정을 localStorage에 저장
-    localStorage.setItem('darkMode', JSON.stringify(newIsDarkMode));
-  };
-
   return (
     <ToggleWrapper>
       <ToggleSwitch isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}>
-        <Input type='checkbox' checked={isDarkMode} onChange={handleToggle} />
+        <Input
+          type='checkbox'
+          checked={isDarkMode}
+          onChange={(e) => handleToggle(e.target.checked, setIsDarkMode)}
+        />
         <Slider isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
       </ToggleSwitch>
     </ToggleWrapper>

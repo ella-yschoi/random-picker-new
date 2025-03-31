@@ -11,6 +11,8 @@ import {
   InteractionButton,
 } from '../components/button/Button';
 
+import { handleInputChange } from '../hooks/handlers';
+
 import {
   Container,
   DirectionContainer,
@@ -36,10 +38,6 @@ const SettingPage: React.FC<SettingPageProps> = ({
       : false;
     setIsDarkMode(currentTheme);
   }, [setIsDarkMode]);
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setNameInput(event.target.value);
-  };
 
   const handleAddParticipant = (event: React.FormEvent) => {
     event.preventDefault(); // 폼 제출 시 페이지 새로고침 방지
@@ -87,7 +85,7 @@ const SettingPage: React.FC<SettingPageProps> = ({
             type='text'
             id='name'
             value={nameInput}
-            onChange={handleInputChange}
+            onChange={(event) => handleInputChange(event, setNameInput)}
           />
           <InteractionButton onClick={handleAddParticipant}>
             입력
