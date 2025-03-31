@@ -36,7 +36,7 @@ const LoadingPage = () => {
       <Title />
       <DirectionContainer>당첨자 뽑는 중.. 잠시만 기다려주세요 🙏🏻</DirectionContainer>
       <ImageContainer>
-        <img src={LoadingImage} alt='Loading Image' />
+        <img src={LoadingImage} alt='Loading Image' />;
       </ImageContainer>
     </Container>
   );
