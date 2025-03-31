@@ -1,4 +1,4 @@
-# 🔀 Random Picker
+# 🔀 Random Picker (Test Repo.)
 
 > 이번엔 누가 할래? 쓸모 있는 랜덤 피커
 
@@ -7,7 +7,7 @@
 ## 👩🏻‍💻 프로젝트
 
 - 진행기간: 2024.02.12 ~ 2024.02.20
-- 배포링크: [🔀 Random Picker](https://random-picker-zeta.vercel.app/)
+- 배포링크: [🔀 Random Picker](https://random-picker-new.vercel.app/)
 - 회고기록: [랜덤 추첨기 프로젝트 배움 기록](https://devella.oopy.io/0a26f347-3c6c-4bb6-adab-34cfa1283e9c)
 - 이슈관리: [Github Projects](https://github.com/users/ella-yschoi/projects/3)
 - 레퍼런스: [random-presenter-picker](https://github.com/hustle-dev/random-presenter-picker)
