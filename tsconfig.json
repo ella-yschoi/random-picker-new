@@ -12,7 +12,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "react-jsx", // JSX 문법 사용 허용
+    "esModuleInterop": true, // React import 오류 방지
+    "forceConsistentCasingInFileNames": true, // 파일명 대소문자 일관성 체크
 
     /* Linting */
     "strict": true,
