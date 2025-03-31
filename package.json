@@ -42,11 +42,10 @@
   },
   "lint-staged": {
     "**/*.{ts,tsx,js,jsx}": [
-      "npm run lint",
+      "npx eslint --fix",
       "npm run test -- --passWithNoTests",
       "npx prettier --write",
-      "npx tsc --project tsconfig.json --noEmit",
-      "git add"
+      "npx tsc --project tsconfig.json --noEmit"
     ]
   }
 }
