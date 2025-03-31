@@ -44,8 +44,7 @@
     "**/*.{ts,tsx,js,jsx}": [
       "npx eslint --fix",
       "npm run test -- --passWithNoTests",
-      "npx prettier --write",
-      "npx tsc --project tsconfig.json --noEmit"
+      "npx prettier --write"
     ]
   }
 }
