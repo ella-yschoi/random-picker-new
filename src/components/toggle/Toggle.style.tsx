@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 import { ToggleProps } from './Toggle.type';
 
 const ToggleWrapper = styled.div`
@@ -48,15 +49,15 @@ const Slider = styled.span<ToggleProps>`
     justify-content: center;
     align-items: center;
     font-family: 'Tossface', sans-serif;
-    ${({ isDarkMode }) => isDarkMode
-      ? `
+    ${({ isDarkMode }) =>
+      isDarkMode
+        ? `
         transform: translateX(26px);
         content: '🌚';
       `
-      : `
+        : `
         content: '🌞';
-      `
-    }
+      `}
   }
 `;
 

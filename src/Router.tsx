@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import MainPage from './pages/MainPage';
-import SettingPage from './pages/SettingPage';
 import ConfirmPage from './pages/ConfirmPage';
 import LoadingPage from './pages/LoadingPage';
+import MainPage from './pages/MainPage';
+import SettingPage from './pages/SettingPage';
 import WinnerPage from './pages/WinnerPage';
 
 export enum RoutePath {
@@ -22,10 +22,16 @@ const RouteProvider = () => {
     <BrowserRouter>
       <Routes>
         <Route path={RoutePath.Root} element={<MainPage participants={participants} />} />
-        <Route path={RoutePath.Setting} element={<SettingPage participants={participants} setParticipants={setParticipants} />} />
+        <Route
+          path={RoutePath.Setting}
+          element={<SettingPage participants={participants} setParticipants={setParticipants} />}
+        />
         <Route path={RoutePath.Confirm} element={<ConfirmPage participants={participants} />} />
         <Route path={RoutePath.Loading} element={<LoadingPage />} />
-        <Route path={RoutePath.Winner} element={<WinnerPage participants={participants} setParticipants={setParticipants} />} />
+        <Route
+          path={RoutePath.Winner}
+          element={<WinnerPage participants={participants} setParticipants={setParticipants} />}
+        />
       </Routes>
     </BrowserRouter>
   );

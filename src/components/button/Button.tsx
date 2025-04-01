@@ -17,15 +17,11 @@ const PrimaryButton: React.FC<ButtonProps> = ({ children, to }) => {
 };
 
 const NavigationButton: React.FC<ButtonProps> = ({ children, onClick }) => {
-  return (
-    <ButtonStyle onClick={onClick}>{children}</ButtonStyle>
-  );
+  return <ButtonStyle onClick={onClick}>{children}</ButtonStyle>;
 };
 
 const InteractionButton: React.FC<ButtonProps> = ({ children, onClick }) => {
-  return (
-    <ButtonStyle onClick={onClick}>{children}</ButtonStyle>
-  );
+  return <ButtonStyle onClick={onClick}>{children}</ButtonStyle>;
 };
 
 const StyledLink = styled(Link)`

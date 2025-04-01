@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
 
 import { handleToggle } from '../../hooks/handlers';
-
+import { Input, Slider, ToggleSwitch, ToggleWrapper } from './Toggle.style';
 import { ToggleProps } from './Toggle.type';
-import { ToggleWrapper, ToggleSwitch, Slider, Input } from './Toggle.style';
 
 const Toggle: React.FC<ToggleProps> = ({ isDarkMode, setIsDarkMode }) => {
   useEffect(() => {
@@ -21,7 +20,7 @@ const Toggle: React.FC<ToggleProps> = ({ isDarkMode, setIsDarkMode }) => {
           checked={isDarkMode}
           onChange={(e) => handleToggle(e.target.checked, setIsDarkMode)}
         />
-        <Slider isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
+        <Slider isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       </ToggleSwitch>
     </ToggleWrapper>
   );

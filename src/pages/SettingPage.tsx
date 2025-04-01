@@ -1,41 +1,33 @@
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 
-import { SettingPageProps } from '../types/pages.type';
-
-import { useTheme } from '../contexts/ThemeProvider';
-import Toggle from '../components/toggle/Toggle';
-import Title from '../components/title/Title';
+import { InteractionButton, NavigationButton } from '../components/button/Button';
 import {
-  NavigationButton,
-  InteractionButton,
-} from '../components/button/Button';
-
-import { handleInputChange } from '../hooks/handlers';
-
-import {
+  ButtonsContainer,
   Container,
   DirectionContainer,
   InputContainer,
   SettingListContainer,
-  ButtonsContainer,
 } from '../components/container/Container.style';
 import { TextInput } from '../components/input/Input.style';
-import { SettingListUnit, PencilIcon } from '../components/unit/Units.style';
+import Title from '../components/title/Title';
+import Toggle from '../components/toggle/Toggle';
+import { PencilIcon, SettingListUnit } from '../components/unit/Units.style';
 
-const SettingPage: React.FC<SettingPageProps> = ({
-  setParticipants,
-  participants,
-}) => {
+import { handleInputChange } from '../hooks/handlers';
+
+import { useTheme } from '../contexts/ThemeProvider';
+
+import { SettingPageProps } from '../types/pages.type';
+
+const SettingPage: React.FC<SettingPageProps> = ({ setParticipants, participants }) => {
   const [nameInput, setNameInput] = useState('');
   const navigate = useNavigate();
 
   const { isDarkMode, setIsDarkMode } = useTheme();
 
   useEffect(() => {
-    const currentTheme = document.body.classList.contains('dark-mode')
-      ? true
-      : false;
+    const currentTheme = document.body.classList.contains('dark-mode') ? true : false;
     setIsDarkMode(currentTheme);
   }, [setIsDarkMode]);
 
@@ -87,9 +79,7 @@ const SettingPage: React.FC<SettingPageProps> = ({
             value={nameInput}
             onChange={(event) => handleInputChange(event, setNameInput)}
           />
-          <InteractionButton onClick={handleAddParticipant}>
-            입력
-          </InteractionButton>
+          <InteractionButton onClick={handleAddParticipant}>입력</InteractionButton>
         </InputContainer>
       </form>
       <SettingListContainer>

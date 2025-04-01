@@ -1,29 +1,28 @@
-import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import { MainPageProps } from '../types/pages.type';
-
-import { useTheme } from '../contexts/ThemeProvider';
-import Toggle from '../components/toggle/Toggle';
-import Title from '../components/title/Title';
-import { PrimaryButton, NavigationButton } from '../components/button/Button';
-import TitleImageinDarkMode from '../assets/TitleImage-white.png';
-import TitleImageinLightMode from '../assets/TitleImage-black.png';
-
+import { NavigationButton, PrimaryButton } from '../components/button/Button';
 import {
-  Container,
   ButtonsContainer,
+  Container,
   ImageContainer,
 } from '../components/container/Container.style';
+import Title from '../components/title/Title';
+import Toggle from '../components/toggle/Toggle';
+
+import { useTheme } from '../contexts/ThemeProvider';
+
+import TitleImageinLightMode from '../assets/TitleImage-black.png';
+import TitleImageinDarkMode from '../assets/TitleImage-white.png';
+
+import { MainPageProps } from '../types/pages.type';
 
 const MainPage: React.FC<MainPageProps> = ({ participants }) => {
   const navigate = useNavigate();
   const { isDarkMode, setIsDarkMode } = useTheme();
 
   useEffect(() => {
-    const currentTheme = document.body.classList.contains('dark-mode')
-      ? true
-      : false;
+    const currentTheme = document.body.classList.contains('dark-mode') ? true : false;
     setIsDarkMode(currentTheme);
   }, [setIsDarkMode]);
 
@@ -42,17 +41,9 @@ const MainPage: React.FC<MainPageProps> = ({ participants }) => {
       <Title />
       <ImageContainer>
         {isDarkMode ? (
-          <img
-            src={TitleImageinDarkMode}
-            width='300rem'
-            alt='Title Image in Dark Mode'
-          />
+          <img src={TitleImageinDarkMode} width='300rem' alt='Title Image in Dark Mode' />
         ) : (
-          <img
-            src={TitleImageinLightMode}
-            width='300rem'
-            alt='Title Image in Light Mode'
-          />
+          <img src={TitleImageinLightMode} width='300rem' alt='Title Image in Light Mode' />
         )}
       </ImageContainer>
       <ButtonsContainer gap='1rem'>

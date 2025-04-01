@@ -1,16 +1,17 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 
-import { useTheme } from '../contexts/ThemeProvider';
-import Toggle from '../components/toggle/Toggle';
-import Title from '../components/title/Title';
-import LoadingImage from '../assets/drumming.gif';
-
 import {
   Container,
   DirectionContainer,
   ImageContainer,
 } from '../components/container/Container.style';
+import Title from '../components/title/Title';
+import Toggle from '../components/toggle/Toggle';
+
+import { useTheme } from '../contexts/ThemeProvider';
+
+import LoadingImage from '../assets/drumming.gif';
 
 const LoadingPage = () => {
   const navigate = useNavigate();
@@ -18,9 +19,7 @@ const LoadingPage = () => {
   const { isDarkMode, setIsDarkMode } = useTheme();
 
   useEffect(() => {
-    const currentTheme = document.body.classList.contains('dark-mode')
-      ? true
-      : false;
+    const currentTheme = document.body.classList.contains('dark-mode') ? true : false;
     setIsDarkMode(currentTheme);
   }, [setIsDarkMode]);
 
@@ -36,11 +35,9 @@ const LoadingPage = () => {
     <Container>
       <Toggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Title />
-      <DirectionContainer>
-        당첨자 뽑는 중.. 잠시만 기다려주세요 🙏🏻
-      </DirectionContainer>
+      <DirectionContainer>당첨자 뽑는 중.. 잠시만 기다려주세요 🙏🏻</DirectionContainer>
       <ImageContainer>
-        <img src={LoadingImage} alt='Loading Image' />
+        <img src={LoadingImage} alt='Loading Image' />;
       </ImageContainer>
     </Container>
   );

@@ -5,11 +5,7 @@
     "es2021": true,
     "jest": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:tailwindcss/recommended"
-  ],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
   "overrides": [
     {
       "files": ["tests/**/*.js"]
@@ -20,14 +16,12 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "tailwindcss"],
+  "plugins": ["@typescript-eslint"],
   "rules": {
     "max-depth": ["error", 5],
     "max-params": ["error", 6],
     "import/extensions": "off",
     "spaced-comment": ["error", "always"],
-    "tailwindcss/classnames-order": "warn",
-    "tailwindcss/no-custom-classname": "off",
     "max-len": ["error", { "code": 100 }]
     // "max-lines-per-function": ["error", { "max": 30 }]
   }
